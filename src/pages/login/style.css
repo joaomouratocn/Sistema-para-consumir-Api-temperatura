@@ -1,31 +1,30 @@
-.container{
+.container-login{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    min-height: 100vh;
 }
 
-.main{
+.main-login{
     padding: 30px;
     background-color: #0a31529c;
     border-radius: 8px;
 }
 
-.logo{
+.logo-login{
     width: 350px;
     height: auto;
     margin-bottom: 10px;
 }
 
-.form{
+.form-login{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.input{
+.input-login{
     margin: 10px;
     padding: 10px;
     border-radius: 8px;
@@ -34,7 +33,7 @@
     box-sizing: border-box;
 }
 
-.access{
+.access-login{
     margin-top: 5px;
     padding: 10px 20px;
     border: 1px solid #ccc;
@@ -45,7 +44,7 @@
     border-radius: 8px;
 }
 
-.access:hover {
+.access-login:hover {
     background-color: #45a049;
   }
 

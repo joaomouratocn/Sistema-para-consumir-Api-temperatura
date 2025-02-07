@@ -10,13 +10,13 @@ function Login() {
     navigate('/home')
   }
   return (
-    <div className='container'>
-      <div className='main'>
-        <img src={Logo} alt="Logo" className='logo' />
-        <form className='form' onSubmit={handleLogin}>
-          <input className='input' placeholder='Insira unidade' type="text" />
-          <input className='input' placeholder='Insira senha' type="password" />
-          <button className='access' type='submit'>Acessar</button>
+    <div className='container-login'>
+      <div className='main-login'>
+        <img src={Logo} alt="Logo" className='logo-login' />
+        <form className='form-login' onSubmit={handleLogin}>
+          <input className='input-login' placeholder='Insira unidade' type="text" />
+          <input className='input-login' placeholder='Insira senha' type="password" />
+          <button className='access-login' type='submit'>Acessar</button>
         </form>
       </div>
     </div>

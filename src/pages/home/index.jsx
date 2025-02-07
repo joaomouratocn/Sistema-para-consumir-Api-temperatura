@@ -3,22 +3,30 @@ import Logo from '../../assets/logo-horizontal-branco.png'
 
 function Home() {
   return (
-    <div className='container'>
-      <p className='user'>João Mourato</p>
-      <p>Sair</p>
-      <h1>Nome da unidade</h1>
-      <form >
-        <p>Geladeira</p>
-        <input type="text" placeholder='Maxíma' />
-        <input type="text" placeholder='Mínima' />
-        <input type="text" placeholder='Atual' />
-        <p>Ambiente</p>
-        <input type="text" placeholder='Maxíma' />
-        <input type="text" placeholder='Mínima' />
-        <input type="text" placeholder='Atual' />
-        <button>Registrar</button>
+    <div className='container-home'>
+      <div className='top-home'>
+        <h4 className='user-name-home'>Olá João Mourato</h4>
+        <h1 className='unid-name-home'>Nome da unidade</h1>
+        <a className='exit-a-home'>Sair</a>
+      </div>
+
+      <form className='form-home'>
+        <h2 className='amb-name-home'>Geladeira</h2>
+        <div className='inputs-home'>
+          <input className='temp-input-home' type="text" placeholder='Maxíma' />
+          <input className='temp-input-home' type="text" placeholder='Mínima' />
+          <input className='temp-input-home' type="text" placeholder='Atual' />
+        </div>
+        <h2 className='amb-name-home'>Ambiente</h2>
+        <div className='inputs-home'>
+          <input className='temp-input-home' type="text" placeholder='Maxíma' />
+          <input className='temp-input-home' type="text" placeholder='Mínima' />
+          <input className='temp-input-home' type="text" placeholder='Atual' />
+        </div>
+        <button className='submit-home'>Registrar</button>
       </form>
-      <table border="1">
+
+      <table border="1" className='table-home'>
         <thead>
           <tr>
             <th rowSpan="2">Data</th>

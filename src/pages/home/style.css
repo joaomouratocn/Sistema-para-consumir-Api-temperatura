@@ -1,27 +1,58 @@
-h1{
-    color: white;
-    margin-bottom: 10px;
-}
-
-form{
+.container-home{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-input{
+.top-home{
+    width: 90%;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    position: relative;
+}
+
+.amb-name-home{
+    color: white;
+}
+
+.user-name-home{
+    color: white;
+}
+
+.exit-a-home{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exit-a-home:hover{
+    color:#45a049;
+    text-decoration: underline
+}
+
+.form-home{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    width: 90%;
+}
+
+.temp-input-home{
     border-radius: 8px;
     border: 1px;
     padding: 8px;
     flex: 1;
     align-items: center;
+    width: 150px;
+    margin-right: 15px;
+    margin-bottom: 20px;
 }
 
-button{
-    margin-top: 10px;
+.submit-home{
     padding: 10px 20px;
     border: 1px solid #ccc;
     background-color: #6fc985;
@@ -29,19 +60,26 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
+    width: 20%;
+    box-sizing: content-box;
 }
 
-button:hover{
+.submit-home:hover{
     background-color: #45a049;
 }
 
-table{
-    margin: 20px 40px;
+.unid-name-home{
+    color: #2555f1;
+    margin-bottom: 10px;
+}
+
+.table-home{
+    width: 90%;
+    margin: 10px;
+    background-color: white;
 }
 
 th, td{
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
