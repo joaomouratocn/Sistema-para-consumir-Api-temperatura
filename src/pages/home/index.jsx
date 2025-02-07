@@ -1,7 +1,24 @@
 import './style.css'
+import React, {useState} from 'react'
 import Logo from '../../assets/logo-horizontal-branco.png'
 
 function Home() {
+
+  const [geladeira, setGeladeira] = useState({maxima:'', minima:'', atual:''});
+  const [ error, setError] = useState('')
+
+  const handleChange = (e) => {
+    setGeladeira({...geladeira, [name]: value})
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
+  const alert = (e) =>{
+    alert('Realemente são estes dadps!')
+  }
+
   return (
     <div className='container-home'>
       <div className='top-home'>
@@ -10,7 +27,7 @@ function Home() {
         <a className='exit-a-home'>Sair</a>
       </div>
 
-      <form className='form-home'>
+      <form className='form-home' onSubmit={alert}>
         <h2 className='amb-name-home'>Geladeira</h2>
         <div className='inputs-home'>
           <input className='temp-input-home' type="text" placeholder='Maxíma' />
@@ -23,7 +40,7 @@ function Home() {
           <input className='temp-input-home' type="text" placeholder='Mínima' />
           <input className='temp-input-home' type="text" placeholder='Atual' />
         </div>
-        <button className='submit-home'>Registrar</button>
+        <button className='submit-home' type='submit'>Registrar</button>
       </form>
 
       <table border="1" className='table-home'>
