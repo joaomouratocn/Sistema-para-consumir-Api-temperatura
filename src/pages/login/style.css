@@ -1,11 +1,14 @@
 .container-login{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .main-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 30px;
     background-color: #0a31529c;
     border-radius: 8px;
