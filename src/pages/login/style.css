@@ -49,5 +49,16 @@
 
 .access-login:hover {
     background-color: #45a049;
-  }
+}
+
+.register-login{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-login:hover{
+    color: #45a049;
+    text-decoration: underline;
+}
 
