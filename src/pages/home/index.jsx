@@ -5,19 +5,18 @@ import Logo from '../../assets/logo-horizontal-branco.png'
 import Swal from 'sweetalert2';
 
 function Home() {
-  const [refrigerator, setRefregerator] = useState({ maxima: '', minima: '', atual: '' });
+  const [refrigerator, setRefrigerator] = useState({ maxima: '', minima: '', atual: '' });
   const [location, setLocation] = useState({ maxima: '', minima: '', atual: '' })
   const navigate = useNavigate();
 
   const handleLogout = (e) => {
     e.preventDefault();
-    //TO-DO
     navigate('/')
   }
 
   const handleChangeRefrigerator = (e) => {
     const { name, value } = e.target;
-    setRefregerator({ ...refrigerator, [name]: value })
+    setRefrigerator({ ...refrigerator, [name]: value })
   };
 
   const handleChangeLocation = (e) => {
@@ -28,12 +27,12 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      refrigerator.maxima == '' ||
-      refrigerator.minima == '' ||
-      refrigerator.atual == '' ||
-      location.maxima == '' ||
-      location.minima == '' ||
-      location.atual == ''
+      refrigerator.maxima === '' ||
+      refrigerator.minima === '' ||
+      refrigerator.atual === '' ||
+      location.maxima === '' ||
+      location.minima === '' ||
+      location.atual === ''
     ) {
       Swal.fire({
         icon: 'warning',
@@ -54,7 +53,6 @@ function Home() {
       cancelButtonText: 'Não, cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
-        //TO-DO
         console.log('enviado para a API')
       }
     });
@@ -63,67 +61,86 @@ function Home() {
   return (
     <div className='container-home'>
       <div className='top-home'>
-        <img src={Logo} alt="Logo" className='logo-home'/>
-        <a
-          className='exit-a-home'
-          onClick={(e) => {handleLogout(e); }}>Sair</a>
+        <img src={Logo} alt="Logo" className='logo-home' />
+        <div className='right-section-home'>
+          <p className='p-user-home'>Olá <span className='span-user-home'>João</span></p>
+          <a className='exit-a-home' onClick={handleLogout}>Sair</a>
+        </div>
       </div>
 
       <form className='form-home' onSubmit={handleSubmit}>
-        <h2 className='amb-name-home'>Geladeira</h2>
-        <div className='inputs-home'>
-          <input
-            className='temp-input-home'
-            type="text"
-            placeholder='Maxíma'
-            name='maxima'
-            value={refrigerator.maxima}
-            onChange={handleChangeRefrigerator}
-          />
-          <input
-            className='temp-input-home'
-            type="text"
-            placeholder='Mínima'
-            name='minima'
-            value={refrigerator.minima}
-            onChange={handleChangeRefrigerator} />
-          <input
-            className='temp-input-home'
-            type="text"
-            placeholder='Atual'
-            name='atual'
-            value={refrigerator.atual}
-            onChange={handleChangeRefrigerator}
-          />
-        </div>
-        <h2 className='amb-name-home'>Ambiente</h2>
-        <div className='inputs-home'>
-          <input
-            className='temp-input-home'
-            type="text"
-            placeholder='Maxíma'
-            name='maxima'
-            value={location.maxima}
-            onChange={handleChangeLocation} />
-          <input
-            className='temp-input-home'
-            type="text"
-            placeholder='Mínima'
-            name='minima'
-            value={location.minima}
-            onChange={handleChangeLocation} />
-          <input
-            className='temp-input-home'
-            type="text"
-            placeholder='Atual'
-            name='atual'
-            value={location.atual}
-            onChange={handleChangeLocation}
-          />
+        <div className='location-home'>
+          <div className='div-amb-home'>
+            <h2 className='amb-name-home'>Geladeira</h2>
+            <label htmlFor='maxima-refri' className='label-home'>Máxima:</label>
+            <input
+              id='maxima-refri'
+              className='temp-input-home'
+              type="text"
+              placeholder='00.0°C'
+              name='maxima'
+              value={refrigerator.maxima}
+              onChange={handleChangeRefrigerator}
+            />
+            <label htmlFor='minima-refri' className='label-home'>Mínima:</label>
+            <input
+              id='minima-refri'
+              className='temp-input-home'
+              type="text"
+              placeholder='00.0°C'
+              name='minima'
+              value={refrigerator.minima}
+              onChange={handleChangeRefrigerator}
+            />
+            <label htmlFor='atual-refri' className='label-home'>Atual:</label>
+            <input
+              id='atual-refri'
+              className='temp-input-home'
+              type="text"
+              placeholder='00.0°C'
+              name='atual'
+              value={refrigerator.atual}
+              onChange={handleChangeRefrigerator}
+            />
+          </div>
+          <div className='div-amb-home'>
+            <h2 className='amb-name-home'>Ambiente</h2>
+            <label htmlFor='maxima-amb' className='label-home'>Máxima:</label>
+            <input
+              id='maxima-amb'
+              className='temp-input-home'
+              type="text"
+              placeholder='00.0°C'
+              name='maxima'
+              value={location.maxima}
+              onChange={handleChangeLocation}
+            />
+            <label htmlFor='minima-amb' className='label-home'>Mínima:</label>
+            <input
+              id='minima-amb'
+              className='temp-input-home'
+              type="text"
+              placeholder='00.0°C'
+              name='minima'
+              value={location.minima}
+              onChange={handleChangeLocation}
+            />
+            <label htmlFor='atual-amb' className='label-home'>Atual:</label>
+            <input
+              id='atual-amb'
+              className='temp-input-home'
+              type="text"
+              placeholder='00.0°C'
+              name='atual'
+              value={location.atual}
+              onChange={handleChangeLocation}
+            />
+          </div>
         </div>
         <button className='submit-home' type='submit'>Registrar</button>
       </form>
-      <table border="1" className='table-home'>
+
+      <table className='table-home'>
         <thead className='thead-home'>
           <tr>
             <th rowSpan="2">Data</th>
@@ -143,34 +160,32 @@ function Home() {
         <tbody>
           <tr className='tr-home'>
             <td className='td-home'>06/02/2025 - 07:00</td>
-            <td className='td-home'>3.2 °C</td>
-            <td className='td-home'>3.0 °C</td>
-            <td className='td-home'>3.1 °C</td>
-            <td className='td-home'>18.0 °C</td>
-            <td className='td-home'>15.9 °C</td>
-            <td className='td-home'>17 °C</td>
+            <td className='td-home'>3.2°C</td>
+            <td className='td-home'>3.0°C</td>
+            <td className='td-home'>3.1°C</td>
+            <td className='td-home'>18.0°C</td>
+            <td className='td-home'>15.9°C</td>
+            <td className='td-home'>17°C</td>
             <td className='td-home'>João Mourato</td>
           </tr>
-
           <tr className='tr-home'>
             <td className='td-home'>06/02/2025 - 12:00</td>
-            <td className='td-home'>3.2 °C</td>
-            <td className='td-home'>3.0 °C</td>
-            <td className='td-home'>3.1 °C</td>
-            <td className='td-home'>18.0 °C</td>
-            <td className='td-home'>15.9 °C</td>
-            <td className='td-home'>17 °C</td>
+            <td className='td-home'>3.2°C</td>
+            <td className='td-home'>3.0°C</td>
+            <td className='td-home'>3.1°C</td>
+            <td className='td-home'>18.0°C</td>
+            <td className='td-home'>15.9°C</td>
+            <td className='td-home'>17°C</td>
             <td className='td-home'>João Mourato</td>
           </tr>
-
           <tr className='tr-home'>
             <td className='td-home'>06/02/2025 - 17:00</td>
-            <td className='td-home'>3.2 °C</td>
-            <td className='td-home'>3.0 °C</td>
-            <td className='td-home'>3.1 °C</td>
-            <td className='td-home'>18.0 °C</td>
-            <td className='td-home'>15.9 °C</td>
-            <td className='td-home'>17.0 °C</td>
+            <td className='td-home'>3.2°C</td>
+            <td className='td-home'>3.0°C</td>
+            <td className='td-home'>3.1°C</td>
+            <td className='td-home'>18.0°C</td>
+            <td className='td-home'>15.9°C</td>
+            <td className='td-home'>17°C</td>
             <td className='td-home'>João Mourato</td>
           </tr>
         </tbody>

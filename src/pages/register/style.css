@@ -1,11 +1,12 @@
-.container-register{
+.container-register {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.main-register{
+    padding: 20px;
+  }
+  
+  .main-register {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,37 +14,91 @@
     padding: 30px;
     border-radius: 8px;
     background-color: #0a31529c;
-}
-
-.logo-register{
-    width: 350px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .logo-register {
+    width: 80%;
+    max-width: 350px;
     height: auto;
-}
-
-.p-register{
+    margin-bottom: 20px;
+  }
+  
+  .label-register {
     color: white;
     margin-top: 10px;
-}
-
-.input-register{
+  }
+  
+  .input-register {
     padding: 10px;
     border-radius: 8px;
-    border: 1px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.button-register{
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .button-register {
     color: white;
     background-color: #6fc985;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
+    border: none;
+    padding: 12px 20px;
     margin-top: 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
-}
-
-.button-register:hover{
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-register:hover {
     background-color: #45a049;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .main-register {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .logo-register {
+      width: 70%;
+    }
+  
+    .input-register, .button-register {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .button-register {
+      align-self: center;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-register {
+      padding: 15px;
+    }
+  
+    .logo-register {
+      width: 60%;
+    }
+  
+    .label-register {
+      font-size: 12px;
+    }
+  
+    .input-register, .button-register {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }

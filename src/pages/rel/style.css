@@ -1,0 +1,161 @@
+.container-rel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .top-rel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .logo-rel {
+    width: 150px;
+    height: auto;
+  }
+  
+  .right-section-rel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .p-user-rel, .exit-a-rel {
+    color: white;
+  }
+  
+  .span-user-rel {
+    font-weight: bold;
+  }
+  
+  .exit-a-rel {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .exit-a-rel:hover {
+    color: #45a049;
+    text-decoration: underline;
+  }
+  
+  .main-rel {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    background-color: #0a31529c;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  
+  .input-rel {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .button-rel {
+    color: white;
+    background-color: #6fc985;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .print-rel {
+    width: 30px;
+    height: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .thead-rel {
+    color: white;
+    background-color: #0a31529c;
+  }
+  
+  .th-rel, .td-rel {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .tr-rel:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .tr-rel:nth-child(even) {
+    background-color: #c6c6c7;
+  }
+  
+  @media (max-width: 768px) {
+    .top-rel, .main-rel {
+      width: 90%;
+    }
+  
+    .right-section-rel {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+  
+    .main-rel label, .input-rel, .button-rel {
+      font-size: 14px;
+    }
+  
+    .print-rel {
+      width: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-rel {
+      width: 120px;
+    }
+  
+    .main-rel {
+      padding: 20px;
+    }
+  
+    .input-rel, .button-rel {
+      font-size: 12px;
+    }
+  
+    .thead-rel th, .td-rel {
+      font-size: 12px;
+      padding: 3px;
+    }
+  
+    .print-rel {
+      width: 20px;
+    }
+  }

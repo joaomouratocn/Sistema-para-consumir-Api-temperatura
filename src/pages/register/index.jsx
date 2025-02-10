@@ -1,6 +1,6 @@
 import './style.css'
 import Logo from '../../assets/logo-horizontal-branco.png'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const navigate = useNavigate();
@@ -15,19 +15,19 @@ function Register() {
     <div className="container-register">
       <div className="main-register">
         <img src={Logo} alt="Logo" className='logo-register' />
-        <p className='p-register'>Novo usuário:</p>
-        <form action="submit" onSubmit={(e) => { handleRegister(e); }} className='form-register'>
+        <h2 className='label-register'>Cadastro</h2>
+        <form onSubmit={handleRegister} className='form-register'>
           <label className='label-register'>Nome:</label>
-          <input type="text" name='name' placeholder='Insira seu nome' className='input-register' />
-          <p className='p-register'>Email:</p>
-          <input type="text" name='email' placeholder='Insira se e-mail' className='input-register' />
-          <p className='p-register'>Senha:</p>
-          <input type="password" name='password' placeholder='Insira uma senha' className='input-register' />
-          <p className='p-register'>Confirmar:</p>
-          <input type="password" name='password' placeholder='Repita a senha' className='input-register' />
-          <p className='p-register'>Unidade:</p>
-          <select name="unit" id="unit" className='input-register'>
-            <option value="select">Selecione unidade</option>
+          <input type="text" name='name' placeholder='Insira seu nome' className='input-register' id='input-name-register'/>
+          <label className='label-register'>Email:</label>
+          <input type="email" name='email' placeholder='Insira seu e-mail' className='input-register' id='input-email-register'/>
+          <label className='label-register'>Senha:</label>
+          <input type="password" name='password' placeholder='Insira uma senha' className='input-register' id='input-password-register'/>
+          <label className='label-register'>Confirme a senha:</label>
+          <input type="password" name='confirm-password' placeholder='Repita a senha' className='input-register' id='input-confirm-pass-register'/>
+          <label className='label-register'>Selecione unidade:</label>
+          <select name="unit" className='input-register' id='select-unit-register'>
+            <option value="select">Selecione</option>
             <option value="AV">Água Vermelha</option>
             <option value="BT">Botafogo</option>
             <option value="CA">Cidade Aracy</option>

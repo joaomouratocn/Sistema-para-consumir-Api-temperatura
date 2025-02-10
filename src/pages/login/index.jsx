@@ -22,19 +22,21 @@ function Login() {
         <form className='form-login' onSubmit={handleLogin}>
           <input
             className='input-login'
-            placeholder='Insira unidade'
-            type="text" />
+            placeholder='Nome de usuário'
+            type="text"
+            required />
           <input
             className='input-login'
-            placeholder='Insira senha'
-            type="password" />
+            placeholder='Senha'
+            type="password"
+            required />
           <button
             className='access-login'
             type='submit'>Acessar</button>
         </form>
         <a
           className='register-login'
-          onClick={(e) => { handleRegister(e); }}>Cadastrar</a>
+          onClick={handleRegister}>Cadastrar</a>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import './index.css';
 import Login from './pages/login';
 import Register from './pages/register';
 import Home from './pages/home';
-import Adm from './pages/adm';
+import Rel from './pages/rel';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/adm' element={<Adm />} />
+        <Route path='/rel' element={<Rel />} />
       </Routes>
     </Router>
   </StrictMode>

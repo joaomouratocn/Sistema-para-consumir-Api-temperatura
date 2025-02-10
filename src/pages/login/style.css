@@ -1,64 +1,112 @@
-.container-login{
+.container-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.main-login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-    background-color: #0a31529c;
-    border-radius: 8px;
-}
-
-.logo-login{
-    width: 350px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.form-login{
+    padding: 20px;
+  }
+  
+  .main-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.input-login{
-    margin: 10px;
-    padding: 10px;
+    padding: 30px;
+    background-color: #0a31529c;
     border-radius: 8px;
-    border: 1px;
     width: 100%;
-    box-sizing: border-box;
-}
-
-.access-login{
-    margin-top: 5px;
-    padding: 10px 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-login {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .input-login {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .access-login {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
     background-color: #6fc985;
     color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
-}
-
-.access-login:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  .access-login:hover {
     background-color: #45a049;
-}
-
-.register-login{
+  }
+  
+  .register-login {
     color: white;
     font-weight: bold;
     cursor: pointer;
-}
-
-.register-login:hover{
+    margin-top: 30px;
+    transition: color 0.3s ease;
+    margin-left: auto;
+  }
+  
+  .register-login:hover {
     color: #45a049;
     text-decoration: underline;
-}
-
+  }
+  
+  @media (max-width: 768px) {
+    .main-login {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .logo-login {
+      width: 70%;
+    }
+  
+    .input-login, .access-login {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .access-login {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-login {
+      padding: 15px;
+    }
+  
+    .logo-login {
+      width: 60%;
+    }
+  
+    .input-login, .access-login {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .register-login {
+      font-size: 14px;
+    }
+  }
+  
