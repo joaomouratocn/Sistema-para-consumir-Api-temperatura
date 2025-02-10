@@ -17,7 +17,7 @@ function Register() {
         <img src={Logo} alt="Logo" className='logo-register' />
         <p className='p-register'>Novo usuário:</p>
         <form action="submit" onSubmit={(e) => { handleRegister(e); }} className='form-register'>
-          <p className='p-register'>Nome:</p>
+          <label className='label-register'>Nome:</label>
           <input type="text" name='name' placeholder='Insira seu nome' className='input-register' />
           <p className='p-register'>Email:</p>
           <input type="text" name='email' placeholder='Insira se e-mail' className='input-register' />

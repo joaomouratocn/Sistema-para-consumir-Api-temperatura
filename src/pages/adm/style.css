@@ -2,19 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 }
 
 .top-home{
     width: 60%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 10px;
-    position: relative;
 }
 
-.logo-home{
+.logo-adm{
     width: 150px;
     height: auto;
 }
@@ -39,19 +35,10 @@
     border-radius: 8px;
 }
 
-.amb-name-home{
-    color: white;
-}
-
-.temp-input-home{
-    border-radius: 8px;
-    border: 1px;
-    padding: 8px;
-    flex: 1;
-    align-items: center;
-    width: 150px;
-    margin-right: 15px;
-    margin-bottom: 20px;
+.print-adm{
+    width: 20px;
+    height: auto;
+    margin-left: auto;
 }
 
 .submit-home{
@@ -68,10 +55,6 @@
 
 .submit-home:hover{
     background-color: #45a049;
-}
-
-.table-home{    
-    margin: 10px;
 }
 
 .thead-home{

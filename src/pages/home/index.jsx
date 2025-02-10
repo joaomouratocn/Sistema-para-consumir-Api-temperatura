@@ -63,7 +63,7 @@ function Home() {
   return (
     <div className='container-home'>
       <div className='top-home'>
-        <h4 className='user-name-home'>Olá João Mourato</h4>
+        <img src={Logo} alt="Logo" className='logo-home'/>
         <a
           className='exit-a-home'
           onClick={(e) => {handleLogout(e); }}>Sair</a>
@@ -123,7 +123,6 @@ function Home() {
         </div>
         <button className='submit-home' type='submit'>Registrar</button>
       </form>
-
       <table border="1" className='table-home'>
         <thead className='thead-home'>
           <tr>
