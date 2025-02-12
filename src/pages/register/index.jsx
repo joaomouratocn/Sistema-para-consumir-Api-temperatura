@@ -1,5 +1,5 @@
 import './style.css'
-import axios from 'axios';
+import api from '../../util/api'
 import Logo from '../../assets/logo-horizontal-branco.png'
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -8,12 +8,14 @@ import { useEffect } from 'react';
 function Register() {
   const [options, setOptions] = useState([])
   const [selectedOptions, setSelectedOption] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
   const navigate = useNavigate();
 
 
   const fetchUnits = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/units')
+      const response = await api.get('/api/units')
       setOptions(response.data)
     } catch (error) {
       console.log('Erro ao buscar os dados', error)
@@ -30,7 +32,10 @@ function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log('enviado para cadastro!')
+    if(password != confirmPassword){
+      alert('Senhas não coincidem!')
+      return
+    }
     navigate('/')
   }
 
