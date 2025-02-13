@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    height: 100vh;
   }
   
   .main-register {
@@ -26,7 +26,7 @@
   }
   
   .logo-register {
-    width: 80%;
+    width: 70%;
     max-width: 350px;
     height: auto;
     margin-bottom: 20px;
@@ -34,7 +34,6 @@
   
   .label-register {
     color: white;
-    margin-top: 10px;
   }
   
   .input-register {
