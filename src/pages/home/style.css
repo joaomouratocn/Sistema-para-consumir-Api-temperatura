@@ -133,6 +133,7 @@
 
 .th-home, .td-home{
     text-align: center;
+    padding: 5px;
 }
 
 .tr-home:nth-child(odd){

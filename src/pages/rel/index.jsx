@@ -4,7 +4,7 @@ import React from 'react'
 import Logo from '../../assets/logo-horizontal-branco.png'
 import Print from '../../assets/print.png'
 
-function Home() {
+function Rel() {
   const navigate = useNavigate();
 
   const handleLogout = (e) => {
@@ -45,8 +45,8 @@ function Home() {
         <button className='button-rel'>Buscar</button>
         <img src={Print} alt='Print' className='print-rel'/>
       </div>
-      <div className='table-container'>
-        <table border="1">
+      <div className='table-container-rel'>
+        <table className='table-rel'>
           <thead className='thead-rel'>
             <tr>
               <th rowSpan="2">Data</th>
@@ -101,4 +101,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Rel
