@@ -140,6 +140,7 @@ function Home() {
         <button className='submit-home' type='submit'>Registrar</button>
       </form>
 
+      <div className='container-table-home'>
       <table className='table-home'>
         <thead className='thead-home'>
           <tr>
@@ -190,6 +191,7 @@ function Home() {
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   )
 }

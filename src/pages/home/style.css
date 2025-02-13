@@ -1,8 +1,16 @@
+/* 
+    Mostra os limites de cada elemento 
+    * {
+    outline: 1px solid red; 
+    }
+*/
+
 .container-home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .top-home{
@@ -50,7 +58,8 @@
     padding: 30px;
     align-items: center;
     background-color: #0a31529c;
-    width: 40%;
+    width: 70%;
+    max-width: 600px;
     border-radius: 8px;
 }
 
@@ -104,10 +113,17 @@
     margin-right: auto;
 }
 
+.container-table-home{
+    flex-grow: 1;
+    width: 80%;
+    margin: 20px 0;
+    max-width: 800px;
+    overflow: auto;
+}
+
 .table-home{    
-    margin: 10px;
-    width: 40%;
-    overflow-x: auto;
+    width: 100%;
+    overflow: auto;
 }
 
 .thead-home{
@@ -117,7 +133,6 @@
 
 .th-home, .td-home{
     text-align: center;
-    padding: 5px;
 }
 
 .tr-home:nth-child(odd){
@@ -129,7 +144,7 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .top-home {
         width: 90%;
     }
@@ -138,7 +153,11 @@
         width: 120px;
     }
 
-    .form-home {
+    .form-home{
+        width: 70%;
+    }
+
+    .container-table-home{
         width: 90%;
     }
 
@@ -153,13 +172,8 @@
         margin-left: 0;
     }
 
-    .table-home {
-        margin: 10px 0;
-    }
-
     .table-home th, .table-home td {
         font-size: 14px;
-        padding: 8px;
     }
 
     .label-home {
@@ -179,7 +193,7 @@
     }
 
     .form-home {
-        width: 100%;
+        width: 80%;
     }
 
     .temp-input-home {
@@ -192,6 +206,5 @@
 
     .table-home th, .table-home td {
         font-size: 12px;
-        padding: 10px;
     }
 }
