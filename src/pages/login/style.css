@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    height: 100vh;
   }
   
   .main-login {
@@ -13,8 +14,8 @@
     padding: 30px;
     background-color: #0a31529c;
     border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
+    width: 45%;
+    max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -73,7 +74,7 @@
   @media (max-width: 768px) {
     .main-login {
       padding: 20px;
-      width: 90%;
+      width: 60%;
     }
   
     .logo-login {
